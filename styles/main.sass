@@ -1,0 +1,98 @@
+body
+  margin: 0
+  padding: 0
+
+#top
+  width: 100vw
+  height: 100vh
+  margin: 0
+  padding: 0
+  display: flex
+
+  .canvas
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    width: 60vw
+    height: 100%
+    background: #E0E0E0
+    background-image: linear-gradient(45deg, #9E9E9E 25%, transparent 0), linear-gradient(45deg, transparent 75%, #9E9E9E 0), linear-gradient(45deg, #9E9E9E 25%, transparent 0), linear-gradient(45deg, transparent 75%, #9E9E9E 0)
+    background-size: 30px 30px
+    background-position: 0 0, 15px 15px, 15px 15px, 30px 30px
+
+    .refresh
+      position: absolute
+      top: 10px
+      right: 10px
+    .filter
+      position: relative
+      font-size: 0
+      overflow: hidden
+      cursor: crosshair
+      &:active
+        cursor: crosshair
+      img
+        margin: 0
+        padding: 0
+        width: auto
+        height: auto
+        max-width: 58vw
+        max-height: 98vh
+      .selected
+        position: absolute
+        border: 1px dotted #8F8
+    .position
+      position: absolute
+      bottom: 5px
+      right: 5px
+      width: 100px
+      padding: 4px
+      border-radius: 8px
+      background-color: #FFF
+      font-size: 0.8rem
+
+  article
+    flex-grow: 1
+
+    h1
+      margin: 0
+      padding: 0 8px
+      background: #000
+      color: #FFF
+
+    h2
+      margin: 8px 0 0
+      padding: 0 8px
+
+    .field
+      display: flex
+      padding: 0 28px
+
+      input
+        font-size: 1rem
+
+      select
+        width: 100%
+        padding: 8px 0
+        font-size: 1rem
+
+      &.template
+        margin-top: 4px
+
+        input
+          &[type=text]
+            width: calc(100% - 80px)
+            padding: 8px 4px
+          &[type=submit]
+            width: 80px
+
+    .directries
+      margin: 0
+      padding: 0 28px
+      list-style: none
+
+      li
+        margin: 0
+        padding: 0
+        cursor: pointer
